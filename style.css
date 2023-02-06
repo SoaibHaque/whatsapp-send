@@ -1,0 +1,140 @@
+/* reset css */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    color: #e9edef;
+    background-image: linear-gradient(180deg, #111b21, #0a1014);
+}
+
+input,
+select,
+button {
+    font-size: 1.5rem;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    padding: 1rem;
+}
+
+input::placeholder {
+    color: #6a7175;
+}
+
+input {
+    width: 100%;
+    background: #2a3942;
+    color: #e9edef;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* custom css */
+.flex {
+    display: flex;
+}
+
+.flex-aln-center {
+    align-items: center;
+}
+
+.flex-d-col {
+    flex-direction: column;
+}
+
+.flex-jst-center {
+    justify-content: center;
+}
+
+.flex-jst-sb {
+    justify-content: space-between;
+}
+
+.flex-jst-sa {
+    justify-content: space-around;
+}
+
+/* main css */
+
+.container {
+    padding-top: 10%;
+    gap: 4rem;
+    height: 100%;
+}
+
+.heading {
+    width: 40%;
+    gap: .5rem;
+}
+
+#bg_img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./bg.png');
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: .1;
+}
+
+form {
+    gap: 1rem;
+    width: 100%;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    color: #8696a0;
+    font-size: 1.5rem;
+}
+
+form button {
+    width: 100%;
+    padding-block: 1rem;
+    width: 40%;
+    border-radius: 8px;
+    background: #005c4b;
+    color: #e9edef;
+    letter-spacing: 1px;
+}
+
+.input-section {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 40%;
+}
+
+.input-section.valid{
+    border: 2px solid #005c4b;
+}
+.input-section.invalid{
+    border: 2px solid #f56464;
+}
+
+.input-section input#countryCode {
+    width: 5rem;
+}

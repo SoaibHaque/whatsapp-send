@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WhatsApp Send</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+  </head>
 
-<body>
-    <div class="container flex flex-d-col flex-aln-center">
-        <div id="bg_img"></div>
-        <div class="heading flex flex-d-col">
-            <h1>Open WhatsApp Chat</h1>
-            <p>Without saving contact</p>
+  <body>
+    <div class="container flex flex-d-col">
+      <div id="bg_img"></div>
+      <div class="heading flex flex-d-col">
+        <h1>Open WhatsApp Chat</h1>
+        <p>Without saving contact</p>
+      </div>
+      <form
+        action="https://web.whatsapp.com/send?phone="
+        class="flex flex-aln-center flex-d-col"
+      >
+        <div class="input-section flex flex-aln-center" style="width: 100%">
+          <input
+            type="number"
+            value="91"
+            id="countryCode"
+            placeholder="Country Code"
+            disabled
+          />
+          <input
+            type="number"
+            id="phoneNumber"
+            placeholder="Enter number without '91'"
+          />
         </div>
-        <form action="https://api.whatsapp.com/send?phone=" class="flex flex-aln-center flex-d-col flex-jst-center">
-            <div class="input-section flex flex-aln-center flex-jst-center">
-                <input type="number" value="91" id="countryCode" placeholder="Country Code" disabled>
-                <input type="number" id="phoneNumber" placeholder="Enter number without '91'">
-            </div>
-            <button type="submit">Open Chat</button>
-        </form>
+        <div class="flex flex-jst-sb flex-aln-center" style="width: 100%">
+          <label for="open_application">
+            <p>Open WhatsApp Application</p>
+          </label>
+          <span>
+            <input type="checkbox" name="" id="open_application" />
+          </span>
+        </div>
+        <button style="margin-top: 1rem" type="submit">Open Chat</button>
+      </form>
     </div>
 
     <!-- script -->
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
